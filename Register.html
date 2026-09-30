@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="styleSheet" href="rig_style.css" />
+    <link rel="icon" href="register.png" type="image/x-icon">
+</head>
+
+<body>
+    <form>
+        <h2>Create Account</h2>
+        <br>
+        <label for="First Name">First Name:</label>
+        <input type="text" id="First Name" name="First Name" required>
+        <label for="Last Name">Last Name:</label>
+        <input type="text" id="Last Name" name="Last Name">
+        <label for="Email Address">Email Address:</label>
+        <input type="email" id="Email Address" name="Email Address" required>
+        <label for="Phone Number">Phone Number:</label>
+        <input type="number" id="Phone Number" name="Phone Number">
+        <label for="password">password:</label>
+        <input type="password" id="Password" name="password" required>
+        <label for="Confirm Password">Confirm Password:</label>
+        <input type="password" id="Confirm Password" name="Confirm Password" required>
+        <label>
+            <p>Gender</p>
+        </label>
+        <div class="radio-group">
+            <label><input type="radio" name="Gender" value="male"> Male</label>
+            <label><input type="radio" name="Gender" value="female">Female</label>
+        </div>
+        <label for="BirthDate">BirthDate:</label>
+        <input type="date" id="BirthDate" name="BirthDate" required>
+        <label>
+            <p>Register as</p>
+        </label>
+        <div class="radio-group">
+            <label><input type="radio" name="role" value="chef"> Chef</label>
+            <label><input type="radio" name="role" value="customer">customer</label>
+            <label><input type="radio" name="role" value="Technical support">Technical support</label>
+        </div>
+        <p>Select governorate</p>
+        <select id="governorate">
+            <option value="Cairo">Cairo</option>
+            <option value="Giza">Giza</option>
+            <option value="Alexandria">Alexandria</option>
+            <option value="Dakahlia">Dakahlia</option>
+            <option value="Red Sea">Red Sea</option>
+            <option value="Beheira">Beheira</option>
+            <option value="Faiyum">Faiyum</option>
+            <option value="Gharbia">Gharbia</option>
+            <option value="Ismailia">Ismailia</option>
+            <option value="Monufia">Monufia</option>
+            <option value="Minya">Minya</option>
+            <option value="Qalyubia">Qalyubia</option>
+            <option value="New Valley">New Valley</option>
+            <option value="Suez">Suez</option>
+            <option value="Aswan">Aswan</option>
+            <option value="Assiut">Assiut</option>
+            <option value="Beni Suef">Beni Suef</option>
+            <option value="Port Said">Port Said</option>
+            <option value="Damietta">Damietta</option>
+            <option value="Sharqia">Sharqia</option>
+            <option value="South Sinai">South Sinai</option>
+            <option value="Kafr El Sheikh">Kafr El Sheikh</option>
+            <option value="Matrouh">Matrouh</option>
+            <option value="Luxor">Luxor</option>
+            <option value="Qena">Qena</option>
+            <option value="North Sinai">North Sinai</option>
+            <option value="Sohag">Sohag</option>
+        </select> <br>
+        <p>Location:</p>
+        <textarea></textarea><br>
+        <button type="button" onclick="validateRegister()">Register</button>
+        </button>
+        <input type="reset">
+    </form>
+    <script>
+        function validateRegister() {
+            let firstName = document.getElementById("First Name").value.trim();
+            let lastName = document.getElementById("Last Name").value.trim();
+            let email = document.getElementById("Email Address").value.trim();
+            let phone = document.getElementById("Phone Number").value.trim();
+            let password = document.getElementById("Password").value;
+            let confirmPassword = document.getElementById("Confirm Password").value;
+            let birthDate = document.getElementById("BirthDate").value;
+            let governorate = document.getElementById("governorate").value;
+
+            if (firstName === "" || email === "" || password === "" || confirmPassword === "") {
+                alert("Please fill all required fields!");
+            } else if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+            } else if (password.length < 8) {
+                alert("Password must be at least 8 characters!");
+            } else {
+                alert("Registration Successful!\nWelcome " + firstName + "!");
+                window.location.href = "index.html"
+            }
+        }
+    </script>
+</body>
+
+</html>

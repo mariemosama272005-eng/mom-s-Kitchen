@@ -1,0 +1,609 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="styleSheet" href="details_style.css" />
+    <link rel="icon" href="ditails.png" type="image/x-icon">
+</head>
+
+<body>
+    <div>
+        <br>
+        <i>
+            <h1>Our Top Chefs And Their Talend</h1>
+        </i>
+        <h5>Tap On The Photo To See The Details</h5>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="div1">
+        <div>
+            <div>
+                <img src="Amira.jpg" alt="chef Amira pic" width="100" onclick="showContentAmira()">
+                <h2>Amira</h2>
+                <p id="Amira_p0"> <strong>From:</strong>cairo</p>
+                <p id="Amira__p1"><strong>location:</strong> Zamalek </p>
+                <p id="Amira__p2"><strong> food delivery to:</strong> Zamalek , Maadi , Nasr City , Giza , Abbassia .
+                </p>
+                <p id="Amira__p3">Amira offers the most delicious traditional Egyptian dishes.</p>
+                <p id="Amira__p4"><strong>Featured Dishes :</strong>
+                <dl id="Amira__dl0">
+                    <dt><strong>Hawawshi:</strong></dt>
+                    <dd>Hawawshi is a crispy, pita stuffed Egyptian street food filled with spiced ground meat, onions,
+                        and herbs. </dd>
+                </dl>
+                </p>
+                <dl id="Amira__dl1">
+                    <dt><strong> stuffed Grape leaves: </strong></dt>
+                    <dd> Stuffed grape leaves are filled with rice, herbs, spices, and sometimes meat, then simmered for
+                        flavor. </dd>
+                </dl>
+                </p>
+                <dl id="Amira__dl2">
+                    <dt><strong>koshary:</strong> </dt>
+                    <dd>Koshary is a flavorful Egyptian dish with rice, lentils, pasta, crispy onions, and spicy tomato
+                        sauce. </dd>
+                </dl>
+                </p>
+                <dl id="Amira__dl3">
+                    <dt> <strong>Molokhia: </strong></dt>
+                    <dd> Molokhia is a garlicky, aromatic soup made with jute leaves, broth, coriander, and lemon for
+                        rich flavor.</dd>
+                </dl>
+                </p>
+                <dl id="Amira__dl4">
+                    <dt><strong>Fatta:</strong> </dt>
+                    <dd> Fatta is a hearty dish with crispy bread, rice, meat, and garlicky broth, topped with vinegar
+                        sauce.</dd>
+                </dl>
+                </p>
+                <dl id="Amira__dl5">
+                    <dt><strong> Mombar: </strong></dt>
+                    <dd>Mombar is stuffed intestines filled with rice, meat, onions, and spices, then boiled or fried.
+                    </dd>
+                </dl>
+                </p>
+                <button id="buttonAmira" onclick="showMenuAmira()">order now </button>
+            </div>
+
+            <div id="menuAmira" style="display:none;">
+                <h3> Choose Your Dishes </h3>
+                <form id="orderFormAmira">
+                    <label>
+                        <input type="checkbox" name="dishAmira" value=" Hawawshi- $30"> Hawawshi - $30
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishAmira" value=" stuffed Grape leaves- $30"> stuffed Grape leaves
+                        - $30
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishAmira" value="koshary - $30"> koshary - $30
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishAmira" value=" Molokhia- $30"> Molokhia- $30
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishAmira" value=" Fatta - $30"> Fatta - $30
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishAmira" value=" Mombar - $30"> Mombar- $30
+                    </label> <br>
+                    <button id="buttonAmira2" type="button" onclick="submitOrderAmira()">Submit</button>
+                </form>
+            </div>
+            <script>
+                function showMenuAmira() {
+                    document.getElementById('menuAmira').style.display = 'block';
+                }
+                function submitOrderAmira() {
+                    alert("Your Food Will Be Prepared Soon From💕✨");
+                }
+                function showContentAmira() {
+                    document.getElementById('Amira_p0').style.display = 'block';
+                    document.getElementById('Amira__dl1').style.display = 'block';
+                    document.getElementById('Amira__p2').style.display = 'block';
+                    document.getElementById('Amira__p3').style.display = 'block';
+                    document.getElementById('Amira__p4').style.display = 'block';
+                    document.getElementById('Amira__dl0').style.display = 'block';
+                    document.getElementById('Amira__dl0').style.display = 'block';
+                    document.getElementById('Amira__dl2').style.display = 'block';
+                    document.getElementById('Amira__dl3').style.display = 'block';
+                    document.getElementById('Amira__dl4').style.display = 'block';
+                    document.getElementById('Amira__dl5').style.display = 'block';
+                    document.getElementById('buttonAmira').style.display = 'block';
+                    document.getElementById('buttonAmira2').style.display = 'block';
+                } 
+            </script>
+        </div>
+        <br>
+        <div>
+            <div class="Fatima">
+                <img src="Fatima.jpg" alt="chef Fatima pic" width="100" onclick="showContentFatima()">
+                <h2>Fatima</h2>
+                <p id="Fatima_p0"> <strong>From:</strong>Alexandria</p>
+                <p id="Fatima__p1"><strong>location</strong> Anfoushi </p>
+                <p id="Fatima__p2"><strong> food delivery to :</strong> Anfoushi ,Stanley, Kafr Abdu , Moharam Bek .
+                </p>
+                <p id="Fatima__p3">Fatima specializes in preparing delicious desserts .</p>
+                <p id="Fatima__p4"><strong>Featured Dishes :</strong>
+                <dl>
+                    <dt>Qatayef</dt>
+                    <dd> Qatayef is a yeasted pancake-like dessert, stuffed, sealed, then fried or baked, and sweetened
+                        with syrup.</dd>
+                </dl>
+                </p>
+                <dl id="Fatima__dl0">
+                    <dt><strong> Kunafa: </strong></dt>
+                    <dd> Kunafa is a crispy, golden dessert filled with gooey cream or cheese, drenched in fragrant
+                        sugar syrup. </dd>
+                </dl>
+                </p>
+                <dl id="fatima__dl1">
+                    <dt><strong> Basbousa: </strong></dt>
+                    <dd>Basbousa is a semolina cake sweetened with syrup, baked, and topped with almonds or nuts for
+                        richness. </dd>
+                </dl>
+                </p>
+                </p>
+                <dl id="Fatima__dl2">
+                    <dt><strong> Om Ali:</strong> </dt>
+                    <dd> Om Ali is a warm, baked dessert with pastry, milk, sugar, nuts, and dried fruits, golden and
+                        bubbly. </dd>
+                </dl>
+                </p>
+                <dl id="Fatima__dl3">
+                    <dt><strong> Rice Pudding:</strong></dt>
+                    <dd>Rice pudding is a creamy dessert with cooked rice, milk, sugar, and sometimes cream or egg yolks
+                        for richness.</dd>
+                </dl>
+                </p>
+                <dl id="Fatima__dl4">
+                    <dt> <strong> Balah El Sham: </strong></dt>
+                    <dd>This crispy, golden treat is deep-fried, soaked in hot sugar syrup, and has a sweet, syrupy
+                        interior.</dd>
+                </dl>
+                </p>
+                <dl id="Fatima__dl5">
+                    <dt><strong> Mahalabia:</strong></dt>
+                    <dd> Mahalabia is a creamy dessert made with milk, sugar, and cornstarch, flavored with floral
+                        essences, and served chilled. </dd>
+                </dl>
+                </p>
+                <button id="buttonFatima" onclick="showMenuFatima()">order now </button>
+            </div>
+
+            <div id="menuFatima" style="display:none;">
+                <h3> Choose Your Dishes</h3>
+                <form id="orderFormFatima">
+                    <label>
+                        <input type="checkbox" name="dishFatima" value="kunafa - $15"> Kunafa - $15
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishFatima" value="Basbousa - $4"> Basbousa - $4
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishFatima" value="Om Ali - $20"> Om Ali - $20
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishFatima" value="  Rice Pudding- $25"> Rice Pudding - $25
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishFatima" value="  Balah El Sham - $27"> Balah El Sham - $27
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishFatima" value=" Mahalabia  - $29"> Mahalabia - $29
+                    </label><br>
+                    <button id="buttonFatima2" type="button" onclick="submitOrderFatima()">Submit</button>
+                </form>
+            </div>
+            <script>
+                function showMenuFatima() {
+                    document.getElementById('menuFatima').style.display = 'block';
+                }
+                function submitOrderFatima() {
+                    alert("Your Food Will Be Prepared Soon From Fatima 💕✨");
+                }
+                function showContentFatima() {
+                    document.getElementById('Fatima_p0').style.display = 'block';
+                    document.getElementById('Fatima__p1').style.display = 'block';
+                    document.getElementById('Fatima__p2').style.display = 'block';
+                    document.getElementById('Fatima__p3').style.display = 'block';
+                    document.getElementById('Fatima__p4').style.display = 'block';
+                    document.getElementById('Fatima__dl0').style.display = 'block';
+                    document.getElementById('Fatima__dl0').style.display = 'block';
+                    document.getElementById('Fatima__dl2').style.display = 'block';
+                    document.getElementById('Fatima__dl3').style.display = 'block';
+                    document.getElementById('Fatima__dl4').style.display = 'block';
+                    document.getElementById('Fatima__dl5').style.display = 'block';
+                    document.getElementById('buttonFatima').style.display = 'block';
+                    document.getElementById('buttonFatima2').style.display = 'block';
+                }
+            </script>
+        </div>
+    </div>
+    <br>
+
+    <div class="div2">
+        <div>
+            <div>
+                <img src="Sarah.jpg" alt="chef Sarah pic" width="100" onclick="showContentSarah()">
+                <h2>Sarah</h2>
+                <p id="sarah_p0"><strong>From:</strong> Mansoura</p>
+                <p id="sarah_p1"><strong>Location:</strong> El Mashaya District</p>
+                <p id="sarah_p2"><strong>Food Delivery To:</strong> El Gamaa District, Talkha, El
+                    Toriel Street, Gehan Street, El Sikka El Gadida, El Mansoura Corniche, El Mogamaa</p>
+                <p id="sarah_p3">Sarah offers a variety of vegetarian and healthy dishes.</p>
+                <p id="sarah_p4"><strong>Featured Dishes:</strong>
+                <dl id="sarah_dl0">
+                    <dt><strong>Baked Vegetable Tray:</strong> </dt>
+                    <dd>A mix of oven roasted veggies seasoned with herbs and olive oil for a crispy, flavorful bite.
+                    </dd>
+                </dl>
+                <dl id="sarah_dl1">
+                    <dt><strong>Salad:</strong></dt>
+                    <dd>A fresh blend of crisp lettuce, cucumbers, tomatoes, and carrots tossed in a light lemon
+                        vinaigrette.</dd>
+                </dl>
+                <dl id="sarah_dl2">
+                    <dt><strong>Lentil Soup:</strong> </dt>
+                    <dd>A warm, creamy blend of red lentils, carrots, and spices comforting, hearty, and full of flavor.
+                    </dd>
+                </dl>
+                <dl id="sarah_dl3">
+                    <dt><strong> Natural Juices:</strong> </dt>
+                    <dd>Refreshing, freshly squeezed juices made from the finest seasonal fruits, bursting with natural
+                        flavors and nutrients.</dd>
+                </dl>
+                <dl id="sarah_dl4">
+                    <dt><strong> Fresh Juices:</strong></dt>
+                    <dd>A variety of vibrant, freshly squeezed juices, packed with natural goodness to keep you
+                        refreshed and energized all day.</dd>
+                </dl>
+                <dl id="sarah_dl5">
+                    <dt><strong>Baba Ganoush salad:</strong> </dt>
+                    <dd>A smoky, creamy blend of roasted eggplant, tahini, garlic, and lemon juice, topped with fresh
+                        parsley for a refreshing twist.</dd>
+                </dl>
+                </p>
+                </p>
+                <button id="buttonSarah" onclick="showMenu()">order now</button>
+            </div>
+
+            <div id="menu" style="display:none;">
+                <h3>Choose Your Dishes</h3>
+                <form id="orderForm">
+                    <label>
+                        <input type="checkbox" name="dish" value="Baked Vegetable Tray - $10"> Baked Vegetable Tray -
+                        $10
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dish" value="Salad - $5"> Salad - $5
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dish" value="Lentil Soup - $7"> Lentil Soup - $7
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dish" value="Natural Juices - $3"> Natural Juices - $3
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dish" value="Fresh Juices - $4"> Fresh Juices - $4
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dish" value="Baba Ganoush salad - $6"> Baba Ganoush salad - $6
+                    </label><br>
+                    <button id="buttonSarah2" type="button" onclick="submitOrder()">Submit</button>
+                </form>
+            </div>
+
+            <script>
+                function showMenu() {
+                    document.getElementById('menu').style.display = 'block';
+                }
+
+                function submitOrder() {
+                    alert("Your Food Will Be Prepared Soon From Sarah 💕✨");
+                }
+                function showContentSarah() {
+                    document.getElementById('sarah_p0').style.display = 'block';
+                    document.getElementById('sarah_p1').style.display = 'block';
+                    document.getElementById('sarah_p2').style.display = 'block';
+                    document.getElementById('sarah_p3').style.display = 'block';
+                    document.getElementById('sarah_p4').style.display = 'block';
+                    document.getElementById('sarah_dl0').style.display = 'block';
+                    document.getElementById('sarah_dl1').style.display = 'block';
+                    document.getElementById('sarah_dl2').style.display = 'block';
+                    document.getElementById('sarah_dl3').style.display = 'block';
+                    document.getElementById('sarah_dl4').style.display = 'block';
+                    document.getElementById('sarah_dl5').style.display = 'block';
+                    document.getElementById('buttonSarah').style.display = 'block';
+                    document.getElementById('buttonSarah2').style.display = 'block';
+                }
+            </script>
+        </div>
+        <br>
+        <div>
+            <div>
+                <img src="Mona.jpg" alt="chef Mona pic" width="100" onclick="showContentMona()">
+                <h2>Mona</h2>
+                <p id="mona_p0"><strong>From:</strong> Red Sea</p>
+                <p id="mona_p1"><strong>Location:</strong> Hurghada - El Dahar District </p>
+                <p id="mona_p2"><strong>Food Delivery To:</strong> El Kawther District, El Hadaba, El
+                    Nasr Street, Sekalla, El Helal Area, El Mohamady Hegazy Street</p>
+                <p id="mona_p3">Mona offers the freshest seafood delicacies.</p>
+                <p id="mona_p4"><strong>Featured Dishes:</strong>
+                <dl id="mona_dl0">
+                    <dt> <strong>Crab:</strong></dt>
+                    <dd>Succulent, tender crab meat served fresh, full of flavor with a touch of seasoning, perfect for
+                        seafood lovers.</dd>
+                </dl>
+                <dl id="mona_dl1">
+                    <dt> <strong>Grilled Fish:</strong></dt>
+                    <dd>Fresh, tender fish fillets grilled to perfection, seasoned with herbs and spices, offering a
+                        smoky, savory flavor.</dd>
+                </dl>
+                <dl id="mona_dl2">
+                    <dt><strong> Fried Fish:</strong></dt>
+                    <dd>Crispy and golden fried fish fillets, coated with a light, crunchy batter, perfect for a
+                        delicious seafood treat.</dd>
+                </dl>
+                <dl id="mona_dl3">
+                    <dt><strong> Shrimp:</strong></dt>
+                    <dd>Juicy, tender shrimp cooked to perfection, seasoned with a blend of spices, perfect for a savory
+                        seafood experience.</dd>
+                </dl>
+                <dl id="mona_dl4">
+                    <dt><strong>squid Tagine:</strong> </dt>
+                    <dd>A rich and flavorful Moroccan-inspired dish, featuring tender squid cooked in a savory tagine
+                        with tomatoes, onions, and aromatic spices.</dd>
+                </dl>
+                <dl id="mona_dl5">
+                    <dt><strong> Seafood Soup:</strong></dt>
+                    <dd>A hearty, flavorful broth filled with a mix of fresh seafood, including shrimp, fish, and squid,
+                        simmered with vegetables and aromatic spices.</dd>
+                </dl>
+                <dl id="mona_dl6">
+                    <dt><strong> Fried Calamari:</strong></dt>
+                    <dd>Crispy, golden-fried calamari rings, perfectly seasoned with a light batter, served with a tangy
+                        dipping sauce.</dd>
+                </dl>
+                </p>
+                <button id="buttonMona" onclick="showMenuMona()">order now</button>
+            </div>
+
+            <div id="menuMona" style="display: none;">
+                <h3>Choose Your Dishes</h3>
+                <form id="orderForm">
+                    <label>
+                        <input type="checkbox" name="dishMona" value="Crab - $15"> Crab - $15
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishMona" value="Grilled Fish - $12"> Grilled Fish - $12
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishMona" value="Fried Fish - $10"> Fried Fish - $10
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishMona" value="Shrimp - $14"> Shrimp - $14
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishMona" value="Squid Tagine - $18"> Squid Tagine - $18
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishMona" value="Seafood Soup - $8"> Seafood Soup - $8
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishMona" value="Fried Calamari - $9">Fried Calamari - $9
+                    </label><br>
+                    <button id="buttonMona2" type="button" onclick="submitOrderMona()">Submit</button>
+                </form>
+            </div>
+            <script>
+                function showMenuMona() {
+                    document.getElementById('menuMona').style.display = 'block';
+                }
+                function submitOrderMona() {
+                    alert("Your Food Will Be Prepared Soon From Mona💕✨");
+                }
+                function showContentMona() {
+                    document.getElementById('mona_p0').style.display = 'block';
+                    document.getElementById('mona_p1').style.display = 'block';
+                    document.getElementById('mona_p2').style.display = 'block';
+                    document.getElementById('mona_p3').style.display = 'block';
+                    document.getElementById('mona_p4').style.display = 'block';
+                    document.getElementById('mona_dl0').style.display = 'block';
+                    document.getElementById('mona_dl1').style.display = 'block';
+                    document.getElementById('mona_dl2').style.display = 'block';
+                    document.getElementById('mona_dl3').style.display = 'block';
+                    document.getElementById('mona_dl4').style.display = 'block';
+                    document.getElementById('mona_dl5').style.display = 'block';
+                    document.getElementById('mona_dl6').style.display = 'block';
+                    document.getElementById('buttonMona').style.display = 'block';
+                    document.getElementById('buttonMona2').style.display = 'block';
+
+
+                }
+            </script>
+        </div>
+    </div>
+    <br>
+    <div class="div3">
+        <div>
+            <div>
+                <img src="Gahda.jpg" alt="chef Gahda pic" width="100" onclick="showContentGahda()">
+                <h2>Ghada</h2>
+                <p id="Gahda_p0"><strong>From:</strong> Port Said</p>
+                <p id="Gahda_p1"><strong>Location:</strong> El Zohur District</p>
+                <p id="Gahda_p2"><strong>Food Delivery To:</strong> El Manakh District, El Arab,
+                    El Gameel District, El Obour District, El Mostashfa El Aam, El Zohur Stadium & Sports City Area</p>
+                <p id="Gahda_p3">Ghada offers the most delicious homemade baked goods and pastries.</p>
+                <p id="Gahda_p4"><strong>Featured Dishes:</strong>
+                <dl id="Gahda_dl0">
+                    <dt><strong> Feteer Meshaltet:</strong></dt>
+                    <dd>A delicious Egyptian pastry, flaky and buttery, filled with a variety of options like honey,
+                        cheese, or vegetables, served warm for a rich, indulgent treat.</dd>
+                </dl>
+                <dl id="Gahda_dl1">
+                    <dt><strong>Cheese Pies:</strong></dt>
+                    <dd>Flaky, golden-brown pies filled with a creamy blend of cheese, perfect for a savory snack or
+                        appetizer.</dd>
+                </dl>
+                <dl id="Gahda_dl2">
+                    <dt><strong>Eid Cookies:</strong></dt>
+                    <dd>Traditional buttery cookies filled with dates, nuts, or Turkish delight, soft and crumbly with a
+                        dusting of powdered sugar made with love for Eid celebrations.</dd>
+                </dl>
+                <dl id="Gahda_dl3">
+                    <dt><strong>Pizza:</strong></dt>
+                    <dd>Freshly baked with a golden crust, rich tomato sauce, melted mozzarella, and your choice of
+                        toppings classic, cheesy, and irresistible.</dd>
+                </dl>
+                <dl id="Gahda_dl4">
+                    <dt><strong>Biscuits:</strong></dt>
+                    <dd>Crispy, buttery biscuits with a melt in your mouth texture perfect for tea time or a sweet snack
+                        any time of day.</dd>
+                </dl>
+                <dl id="Gahda_dl5">
+                    <dt><strong>Croissant:</strong></dt>
+                    <dd>A soft, buttery, and flaky French pastry baked to golden perfection ideal for breakfast or a
+                        light snack.</dd>
+                </dl>
+                <dl id="Gahda_dl6">
+                    <dt><strong>Sambousek:</strong></dt>
+                    <dd>Crispy, golden pastry pockets stuffed with your choice of savory fillings like cheese, meat, or
+                        vegetables perfect as an appetizer or snack.</dd>
+                </dl>
+                </p>
+                <button id="buttonGahda" onclick="showMinuGahda()">order now</button>
+            </div>
+            <div id="menuGahda" style="display: none;">
+                <h3>Choose Your Dishes</h3>
+                <form id="orderFormGahda">
+                    <label>
+                        <input type="checkbox" name="dishGahda" value="Feteer Meshaltet - $5">Feteer Meshaltet - $5
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishGahda" value="Cheese Pies - $4">Cheese Pies - $4
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishGahda" value="Eid Cookies - $6">Eid Cookies - $6
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishGahda" value="Pizza - $8">Pizza - $8
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishGahda" value="Biscuits (Pack) - $3">Biscuits (Pack) - $3
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishGahda" value="Croissant - $3">Croissant - $3
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="dishGahda" value="Sambousek (Stuffed) - $4">Sambousek (Stuffed) -
+                        $4
+                    </label><br>
+                    <button id="buttonGahda2" type="button" onclick="submitOrderGahda()">Submit</button>
+                </form>
+            </div>
+            <script>
+                function showMinuGahda() {
+                    document.getElementById('menuGahda').style.display = 'block';
+                }
+                function submitOrderGahda() {
+                    alert("Your Food Will Be Prepared Soon From Gahda 💕✨");
+                }
+                function showContentGahda() {
+                    document.getElementById('Gahda_p0').style.display = 'block';
+                    document.getElementById('Gahda_p1').style.display = 'block';
+                    document.getElementById('Gahda_p2').style.display = 'block';
+                    document.getElementById('Gahda_p3').style.display = 'block';
+                    document.getElementById('Gahda_p4').style.display = 'block';
+                    document.getElementById('Gahda_dl0').style.display = 'block';
+                    document.getElementById('Gahda_dl1').style.display = 'block';
+                    document.getElementById('Gahda_dl2').style.display = 'block';
+                    document.getElementById('Gahda_dl3').style.display = 'block';
+                    document.getElementById('Gahda_dl4').style.display = 'block';
+                    document.getElementById('Gahda_dl5').style.display = 'block';
+                    document.getElementById('Gahda_dl6').style.display = 'block';
+                    document.getElementById('buttonGahda').style.display = 'block';
+                    document.getElementById('buttonGahda2').style.display = 'block';
+
+                }
+            </script>
+        </div>
+        <br>
+        <div>
+            <div>
+                <img src="Zainab.jpg" alt="chef Zainab pic" width="100" onclick="showContentZainab()">
+                <h2>Zainab</h2>
+                <p id="Zainab_p0"> <strong>From:</strong>Fayoum</p>
+                <p id="Zainab__p1"><strong>location :</strong> Wadi El-Rayan </p>
+                <p id="Zainab__p2"><strong> food delivery to :</strong> Wadi El-Rayan , Hawara , Lake Qarun , El-Lahun .
+                </p>
+                <p id="Zainab__p3">Zainab offers the most delecious traditional Egyptian pickels</p>
+                <p id="Zainab__p4"><strong>Featured Dishes :</strong>
+                <dl id="Zainab__dl0">
+                    <dt><strong>carrot pickels:</strong></dt>
+                    <dd>Carrot pickles are crisp, zesty, and tangy, quick-pickled or fermented for a balance of sour,
+                        salty, and spicy flavors. </dd>
+                </dl>
+                </p>
+                <dl id="Zainab__dl1">
+                    <dt><strong>Crunchy cucumber pickels:</strong></dt>
+                    <dd> Crunchy cucumber pickles are soaked in vinegar brine with salt and spices, creating a zesty,
+                        crisp, bold flavor.</dd>
+                </dl>
+                </p>
+                <dl id="Zainab__dl2">
+                    <dt><strong> lemon Pickels with Asfour:</strong></dt>
+                    <dd>Lemon pickles with Asfour are tangy, salty, and spicy, preserved with salt, lemon juice, oil,
+                        and spices.</dd>
+                </dl>
+                </p>
+                <button id="buttonZainab" onclick="showMenuZainab()">order now </button>
+            </div>
+
+            <div id="menuZainab" style="display:none;">
+                <h3>Choose Your Dishes</h3>
+                <form id="orderFormZainab">
+                    <label>
+                        <input type="checkbox" name="dishZainab" value="carrot pickels - $45"> carrot pickels- $45
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishZainab" value="Crunchy cucumber pickels - $35"> Crunchy
+                        cucumber pickels - $35
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="dishZainab" value="lemon Pickels with Asfour- $50">lemon Pickels
+                        with Asfour - $50
+                    </label><br>
+                    <button id="buttonZainab2" type="button" onclick="submitOrderZainab()">Submit</button>
+                </form>
+            </div>
+            <script>
+                function showMenuZainab() {
+                    document.getElementById('menuZainab').style.display = 'block';
+                }
+                function submitOrderZainab() {
+                    alert("Your Food Will Be Prepared Soon From Zainab 💕✨");
+                }
+                function showContentZainab() {
+                    document.getElementById('Zainab_p0').style.display = 'block';
+                    document.getElementById('Zainab__p1').style.display = 'block';
+                    document.getElementById('Zainab__p2').style.display = 'block';
+                    document.getElementById('Zainab__p3').style.display = 'block';
+                    document.getElementById('Zainab__p4').style.display = 'block';
+                    document.getElementById('Zainab__dl0').style.display = 'block';
+                    document.getElementById('Zainab__dl1').style.display = 'block';
+                    document.getElementById('Zainab__dl2').style.display = 'block';
+                    document.getElementById('buttonZainab').style.display = 'block';
+                    document.getElementById('buttonZainab2').style.display = 'block';
+                } 
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

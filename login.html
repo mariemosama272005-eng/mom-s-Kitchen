@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login_style.css">
+    <link rel="icon" href="login.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <form id="loginForm">
+        <img src="animation on.jpg" alt="animated on" id="eyeImage">
+        <br><br>
+        <input id="useremail" type="email" placeholder="Email" name="email" required oninput="checkEmail()"> <br>
+        <div class="error" id="emailError"><i style="color: rgb(121, 119, 119);">Please enter a valid email address</i>
+        </div><br>
+
+        <div class="password-container">
+            <input id="userpassword" type="password" placeholder="Password" name="password" required
+                onfocus="changeImageToOff()" onclick="checkPasswordField()" oninput="checkPassword()"> <br>
+            <div class="error" id="passwordError"><i style="color:rgb(121, 119, 119) ;">Password is required</i></div>
+        </div>
+
+        <input type="radio" name="type" value="customer"> Customer
+        <input type="radio" name="type" value="chef"> Chef
+        <input type="radio" name="type" value="Technical support"> Technical support <br>
+        <div class="error" id="typeError"><i style="color:rgb(121, 119, 119) ;">Enter user type</i></div>
+        <button type="submit" id="loginButton">Login</button>
+        <h1>Don't have an account ?</h1><a href="Register.html">Register now</a>
+    </form>
+    <script>
+
+        function changeImageToOff() {
+            document.getElementById('eyeImage').src = "animated off.jpg";
+        }
+
+        function checkPasswordField() {
+            const passwordInput = document.getElementById('userpassword');
+            const eyeImage = document.getElementById('eyeImage');
+
+            if (!passwordInput.value.trim()) {
+                eyeImage.src = "animation on.jpg";
+            } else {
+                passwordInput.type = 'password';
+                eyeImage.src = "animated cheat.jpg";
+            }
+        }
+
+
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('userpassword');
+            const eyeImage = document.getElementById('eyeImage');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeImage.src = "animated cheat.jpg";
+            } else {
+                passwordInput.type = 'password';
+                eyeImage.src = "animated off.jpg";
+            }
+        }
+
+
+        function checkEmail() {
+            const email = document.getElementById('useremail').value;
+            const emailError = document.getElementById('emailError');
+
+            if (!email.includes('@') || email.trim() === "") {
+                emailError.style.display = 'block';
+            } else {
+                emailError.style.display = 'none';
+            }
+            updateLoginButton();
+        }
+
+        function checkPassword() {
+            const password = document.getElementById('userpassword').value;
+            const passwordError = document.getElementById('passwordError');
+
+            if (password.trim() === "") {
+                passwordError.style.display = 'block';
+            } else {
+                passwordError.style.display = 'none';
+            }
+            updateLoginButton();
+        }
+
+
+        function updateLoginButton() {
+            const emailValid = document.getElementById('useremail').value.includes('@');
+            const passwordValid = document.getElementById('userpassword').value.trim() !== '';
+            const userTypeSelected = document.querySelector('input[name="type"]:checked');
+            const loginButton = document.getElementById('loginButton');
+
+
+            if (emailValid && passwordValid && userTypeSelected) {
+                loginButton.classList.add('moving')
+                loginButton.disabled = false;
+                loginButton.style.opacity = '1';
+            } else {
+                loginButton.classList.remove('moving')
+                loginButton.disabled = true;
+                loginButton.style.opacity = '1';
+
+            }
+        }
+
+
+        function validateForm(event) {
+            event.preventDefault();
+            const emailValid = document.getElementById('useremail').value.includes('@');
+            const passwordValid = document.getElementById('userpassword').value.trim() !== '';
+            const userTypeSelected = document.querySelector('input[name="type"]:checked');
+
+            if (emailValid && passwordValid && userTypeSelected) {
+                window.location.href = "index.html";
+            } else {
+                if (!emailValid) document.getElementById('emailError').style.display = 'block';
+                if (!passwordValid) document.getElementById('passwordError').style.display = 'block';
+                if (!userTypeSelected) document.getElementById('typeError').style.display = 'block';
+            }
+        }
+        document.getElementById('loginForm').addEventListener('submit', validateForm);
+        document.querySelectorAll('input[name="type"]').forEach((radio) => {
+            radio.addEventListener('change', () => {
+
+                document.getElementById('typeError').style.display = 'none';
+                updateLoginButton();
+            });
+        });
+        document.addEventListener('DOMContentLoaded', updateLoginButton);
+    </script>
+</body>
+
+</html>
